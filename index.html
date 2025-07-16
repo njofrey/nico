@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Nicolas Jofre | Link Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Resumen y enlaces de contacto de Nicolas Jofre.">
+  <meta property="og:title" content="Nicolas Jofre">
+  <meta property="og:description" content="Resumen y enlaces de contacto.">
+  <meta property="og:image" content="img/avatar.jpg">
+  <meta property="og:type" content="website">
+  <link rel="preload" href="img/avatar.jpg" as="image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="card">
+    <div class="avatar">
+      <img src="img/avatar.png" alt="Nicolas Jofre photo">
+    </div>
+    <h1 class="name">Nicolas Jofre</h1>
+    <p id="tagline" class="tagline">Product Designer & Developer based in Amsterdam.</p>
+    <section class="bio">
+      Passionate about building simple, useful digital products. Experience in product design, frontend, and tech leadership.
+    </section>
+    <ul class="contact-list">
+      <li><a href="mailto:nicolas@jofre.co">nicolas@jofre.co</a></li>
+      <li>Amsterdam, NL</li>
+    </ul>
+    <section class="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>Product Design</li>
+        <li>UI/UX</li>
+        <li>Frontend</li>
+        <li>React</li>
+        <li>Figma</li>
+        <li>Leadership</li>
+      </ul>
+    </section>
+    <ul id="linkList" class="link-list" role="list">
+      <noscript>
+        <li><a class="link-btn" href="https://calculadora-uf.vercel.app/">Calculadora UF</a></li>
+        <li><a class="link-btn" href="https://calculadora-iva-chile.vercel.app/">Calculadora IVA Chile</a></li>
+        <li><a class="link-btn" href="https://divisas-chile.vercel.app/">Divisas Chile</a></li>
+        <li><a class="link-btn" href="https://radio-batista.vercel.app/">Radio Online 24</a></li>
+      </noscript>
+    </ul>
+    <div class="footer-actions" style="display: flex; justify-content: flex-end; align-items: center; margin-bottom: 0;">
+       <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+         <svg class="theme-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+           <circle cx="12" cy="12" r="5" />
+           <path d="M12 1v2" />
+           <path d="M12 21v2" />
+           <path d="M4.22 4.22l1.42 1.42" />
+           <path d="M18.36 18.36l1.42 1.42" />
+           <path d="M1 12h2" />
+           <path d="M21 12h2" />
+           <path d="M4.22 19.78l1.42-1.42" />
+           <path d="M18.36 5.64l1.42-1.42" />
+         </svg>
+       </button>
+    </div>
+    <footer class="footer">
+      Hecho con cariño por Nico.
+    </footer>
+  </main>
+  <script src="js/links.js" defer></script>
+  <script>
+   // Senior UX/UI Theme Switcher
+   document.addEventListener("DOMContentLoaded", function() {
+     const themeToggle = document.getElementById("theme-toggle");
+     const body = document.body;
+     // Detect system preference
+     function applySystemTheme() {
+       if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+         body.classList.add('dark-theme');
+         body.classList.remove('light-theme');
+       } else {
+         body.classList.remove('dark-theme');
+         body.classList.add('light-theme');
+       }
+     }
+     // Apply saved or system theme
+     const savedTheme = localStorage.getItem('theme');
+     if (savedTheme === 'dark-theme' || savedTheme === 'light-theme') {
+       body.classList.add(savedTheme);
+     } else {
+       applySystemTheme();
+     }
+     // Listen for system changes
+     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applySystemTheme);
+     // Toggle theme manually
+     themeToggle.addEventListener('click', () => {
+       if (body.classList.contains('dark-theme')) {
+         body.classList.remove('dark-theme');
+         body.classList.add('light-theme');
+         localStorage.setItem('theme', 'light-theme');
+       } else {
+         body.classList.add('dark-theme');
+         body.classList.remove('light-theme');
+         localStorage.setItem('theme', 'dark-theme');
+       }
+     });
+   });
+  </script>
+</body>
+</html>
