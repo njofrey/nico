@@ -1,110 +1,73 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Nicolas Jofre | Link Hub</title>
+  <title>Nicolas Jofre | Digital Product Architect</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Resumen y enlaces de contacto de Nicolas Jofre.">
-  <meta property="og:title" content="Nicolas Jofre">
-  <meta property="og:description" content="Resumen y enlaces de contacto.">
-  <meta property="og:image" content="img/avatar.jpg">
-  <meta property="og:type" content="website">
-  <link rel="preload" href="img/avatar.jpg" as="image">
+  <meta name="description" content="I build small digital tools that remove big headaches.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+  <link href="https://rsms.me/inter/inter.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <main class="card">
-    <div class="avatar">
-      <img src="img/avatar.png" alt="Nicolas Jofre photo">
-    </div>
-    <h1 class="name">Nicolas Jofre</h1>
-    <p id="tagline" class="tagline">Product Designer & Developer based in Amsterdam.</p>
-    <section class="bio">
-      Passionate about building simple, useful digital products. Experience in product design, frontend, and tech leadership.
+  <main class="wrap">
+    <h1>NICOLAS JOFRE</h1>
+    <header class="header">
+      <img src="img/avatar.jpg" alt="Nicolas Jofre" class="avatar">
+      <div class="header-content">
+        <p class="bio">
+          I am a builder of small digital tools that remove big headaches. I cut software back to the bone and ship fast, useful products. I write about shipping what matters and welcome emails to <a href="mailto:nicolas@jofre.co">nicolas@jofre.co</a>. You can also find me on <a href="https://linkedin.com/in/nicolasjofre">LinkedIn</a> and <a href="https://github.com/nicolasjofre">GitHub</a>.
+        </p>
+      </div>
+    </header>
+
+    <section>
+      <h2>My Philosophy</h2>
+      <p>Most software grows obese with features nobody uses. I cut it back to the bone by finding one real pain point, crafting the simplest fix that works today, and only refining if data proves it matters. I ship, watch, and listen.</p>
     </section>
-    <ul class="contact-list">
-      <li><a href="mailto:nicolas@jofre.co">nicolas@jofre.co</a></li>
-      <li>Amsterdam, NL</li>
-    </ul>
-    <section class="skills">
-      <h2>Skills</h2>
-      <ul>
-        <li>Product Design</li>
-        <li>UI/UX</li>
-        <li>Frontend</li>
-        <li>React</li>
-        <li>Figma</li>
-        <li>Leadership</li>
-      </ul>
+
+    <section>
+      <h2>Shipped Work</h2>
+      <div class="project">
+        <h3><a href="https://calculadora-uf.vercel.app/" target="_blank" rel="noopener noreferrer">UF Calculator</a></h3>
+        <p><strong>Problem:</strong> Finding the official UF value in Chile often means navigating slow, cluttered financial portals.</p>
+        <p><strong>Solution:</strong> A clean, single-screen tool that provides the daily value and an instant calculator. No ads, no bloat.</p>
+        <p class="metadata"><strong>Tech:</strong> Static HTML/CSS/JS for page loads under 100 ms.</p>
+      </div>HaR
+      <div class="project">
+        <h3><a href="https://calculadora-iva-chile.vercel.app/" target="_blank" rel="noopener noreferrer">VAT 19% Calculator</a></h3>
+        <p><strong>Problem:</strong> Calculating the 19% VAT is a repetitive task for freelancers and small businesses that often leads to simple errors.</p>
+        <p><strong>Solution:</strong> A straightforward tool designed to be quicker than opening a spreadsheet for the most common VAT calculation.</p>
+        <p class="metadata"><strong>Tech:</strong> Static HTML/CSS/JS, deployed on Vercel.</p>
+      </div>
+      <div class="project">
+        <h3><a href="https://divisas-chile.vercel.app/" target="_blank" rel="noopener noreferrer">CLP Exchange Dashboard</a></h3>
+        <p><strong>Problem:</strong> Financial websites are filled with noise when all you need is a quick view of the main currency exchange rates.</p>
+        <p><strong>Solution:</strong> A minimalist dashboard showing the key currency pairs at a glance. No ads, no distractions, just the numbers.</p>
+        <p class="metadata"><strong>Tech:</strong> Static HTML and lightweight JS.</p>
+      </div>
+      <div class="project">
+        <h3><a href="https://radio-batista.vercel.app/" target="_blank" rel="noopener noreferrer">Radio Batista Online</a></h3>
+        <p><strong>Problem:</strong> Accessing a live radio stream should be instant, not buried under slow-loading pages, ads, or complex interfaces.</p>
+        <p><strong>Solution:</strong> A minimalist, single-purpose web player that streams Radio Batista live. It loads instantly and has one function: play.</p>
+        <p class="metadata"><strong>Tech:</strong> Static HTML/JS with a persistent audio player, deployed on Vercel.</p>
+      </div>
     </section>
-    <ul id="linkList" class="link-list" role="list">
-      <noscript>
-        <li><a class="link-btn" href="https://calculadora-uf.vercel.app/">Calculadora UF</a></li>
-        <li><a class="link-btn" href="https://calculadora-iva-chile.vercel.app/">Calculadora IVA Chile</a></li>
-        <li><a class="link-btn" href="https://divisas-chile.vercel.app/">Divisas Chile</a></li>
-        <li><a class="link-btn" href="https://radio-batista.vercel.app/">Radio Online 24</a></li>
-      </noscript>
-    </ul>
-    <div class="footer-actions" style="display: flex; justify-content: flex-end; align-items: center; margin-bottom: 0;">
-       <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
-         <svg class="theme-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-           <circle cx="12" cy="12" r="5" />
-           <path d="M12 1v2" />
-           <path d="M12 21v2" />
-           <path d="M4.22 4.22l1.42 1.42" />
-           <path d="M18.36 18.36l1.42 1.42" />
-           <path d="M1 12h2" />
-           <path d="M21 12h2" />
-           <path d="M4.22 19.78l1.42-1.42" />
-           <path d="M18.36 5.64l1.42-1.42" />
-         </svg>
-       </button>
-    </div>
+
+    <section>
+      <h2>Writing</h2>
+      <p><a href="posts/2025-07-18-sample.html">Shipping beats planning</a> <span class="metadata">18 Jul 2025</span></p>
+    </section>
+
     <footer class="footer">
-      Hecho con cariño por Nico.
+      <p>Have a project in mind? <a href="mailto:nicolas@jofre.co">Let's talk.</a></p>
+      <p class="social-links">
+        <a href="https://github.com/nicolasjofre" target="_blank" rel="noopener noreferrer">GitHub</a> /
+        <a href="https://linkedin.com/in/nicolasjofre" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </p>
     </footer>
   </main>
-  <script src="js/links.js" defer></script>
-  <script>
-   // Senior UX/UI Theme Switcher
-   document.addEventListener("DOMContentLoaded", function() {
-     const themeToggle = document.getElementById("theme-toggle");
-     const body = document.body;
-     // Detect system preference
-     function applySystemTheme() {
-       if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-         body.classList.add('dark-theme');
-         body.classList.remove('light-theme');
-       } else {
-         body.classList.remove('dark-theme');
-         body.classList.add('light-theme');
-       }
-     }
-     // Apply saved or system theme
-     const savedTheme = localStorage.getItem('theme');
-     if (savedTheme === 'dark-theme' || savedTheme === 'light-theme') {
-       body.classList.add(savedTheme);
-     } else {
-       applySystemTheme();
-     }
-     // Listen for system changes
-     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applySystemTheme);
-     // Toggle theme manually
-     themeToggle.addEventListener('click', () => {
-       if (body.classList.contains('dark-theme')) {
-         body.classList.remove('dark-theme');
-         body.classList.add('light-theme');
-         localStorage.setItem('theme', 'light-theme');
-       } else {
-         body.classList.add('dark-theme');
-         body.classList.remove('light-theme');
-         localStorage.setItem('theme', 'dark-theme');
-       }
-     });
-   });
-  </script>
 </body>
 </html>
