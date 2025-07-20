@@ -1,8 +1,7 @@
-@import url('https://rsms.me/inter/inter.css');
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap');
+
 
 :root {
-  --font-sans: 'Inter', sans-serif;
+  --font-sans: 'DM Sans', sans-serif;
   --font-grotesk: 'Space Grotesk', sans-serif;
   --color-bg: #F7F3EC;
   --color-text: #232323;
@@ -47,7 +46,7 @@ h1 {
 }
 
 h2 {
-  font-family: var(--font-dm);
+  font-family: var(--font-sans);
   font-size: 22px;
   font-weight: 700;
   color: #111;
@@ -58,13 +57,13 @@ h2 {
 }
 
 h3 {
-  font-family: var(--font-dm);
+  font-family: var(--font-sans);
   font-size: 17px;
   font-weight: 700;
   color: #111;
 }
 
-.bio, .project p, .philosophy p, p {
+.bio, .project p, p {
   font-family: var(--font-sans);
   font-size: 17px;
   line-height: 1.65;
@@ -172,37 +171,7 @@ p {
   margin-bottom: 1.2em;
 }
 
-.manifesto p {
-  font-size: 1.13rem;
-  margin: 0 0 1.2em 0;
-}
 
-.how h2 {
-  margin-top: 32px;
-}
-
-.how ol {
-  margin: 0 0 1.2em 1.2em;
-  padding: 0;
-  font-size: 1.08rem;
-}
-
-.project-list {
-  list-style: disc inside;
-  margin: 0 0 1.2em 1.2em;
-  padding: 0;
-  font-size: 1.08rem;
-}
-
-.project-list li {
-  margin-bottom: 0.5em;
-}
-
-.tech-note {
-  font-size: 0.98rem;
-  color: #6b6b6b;
-  margin-bottom: 0;
-}
 
 a {
   color: var(--color-accent);
