@@ -77,6 +77,12 @@ h3 {
   color: #666;
 }
 
+.location {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 16px;
+}
+
 /* --- VERTICAL RHYTHM & SPACING --- */
 
 .header {
