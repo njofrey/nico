@@ -48,7 +48,7 @@ h2 {
   color: #111;
   border-bottom: 1px solid #EAEAEA;
   padding-bottom: 8px;
-  margin-top: 40px;
+  margin-top: 72px;
   margin-bottom: 32px;
 }
 
@@ -81,7 +81,7 @@ h3 {
   align-items: center;
   gap: 1.2rem;
   text-align: left;
-  margin-bottom: 20px;
+  margin-bottom: 3Pu0px;
 }
 
 .avatar {
@@ -106,8 +106,8 @@ h3 {
 
 /* --- PROYECTOS --- */
 .project {
-  margin-bottom: 46px;
-  padding-bottom: 22px;
+  margin-bottom: 56px;
+  padding-bottom: 32px;
   border-bottom: 1px solid #ececec;
 }
 .project:last-child {
@@ -173,7 +173,7 @@ p {
 }
 
 .how h2 {
-  margin-top: 22px;
+  margin-top: 32px;
 }
 
 .how ol {
@@ -224,7 +224,7 @@ strong {
     flex-direction: column;
     align-items: center;
     gap: 0.7rem;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
   }
   .avatar {
     order: 1;
@@ -238,7 +238,7 @@ strong {
   .main-title {
     order: 2;
     margin-bottom: 0.5rem;
-    margin-top: 0;
+    margin-top: 0.5rem;
   }
   .header-content {
     order: 3;
