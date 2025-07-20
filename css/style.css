@@ -7,7 +7,7 @@
   --color-bg: #F7F3EC;
   --color-text: #232323;
   --color-accent: #B45309;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 *, *::before, *::after {
@@ -227,12 +227,24 @@ strong {
     margin-bottom: 40px;
   }
   .avatar {
+    order: 1;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     width: 80px;
     height: 80px;
     margin-right: 0;
     float: none;
+  }
+  .main-title {
+    order: 2;
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+  }
+  .header-content {
+    order: 3;
+    width: 100%;
+    align-items: center;
+    text-align: center;
   }
   h1 {
     font-size: 1.5rem;
