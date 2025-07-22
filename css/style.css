@@ -152,13 +152,19 @@ h3 {
 }
 
 .footer {
-  margin-top: 72px;
-  padding-top: 32px;
-  font-family: var(--font-sans);
-  font-size: 1rem;
-  color: #6b6b6b;
-  border-top: 1px solid #EAEAEA;
   text-align: left;
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e5e5e5;
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.separator {
+  border: 0;
+  border-top: 1px solid #e5e5e5;
+  margin: 1.5rem 0;
+  width: 100%;
 }
 
 .footer p {
