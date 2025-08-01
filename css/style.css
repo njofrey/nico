@@ -211,3 +211,9 @@ strong {
   .header{flex-direction:column;align-items:center;gap:0.8rem;}
   .avatar{width:110px;height:110px;margin:0.8rem 0 0.4rem;}
 }
+
+.footer .avatar {
+  display: block;
+  margin-left: 0;
+  margin-right: auto;
+}
