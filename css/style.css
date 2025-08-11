@@ -39,7 +39,7 @@ h1 {
 }
 
 .main-title {
-  margin: 0 0 1rem;
+  margin: 0 0 0.5rem;
   text-align: center;
 }
 
@@ -63,8 +63,9 @@ h3 {
 
 .bio {
   font-family: var(--font-sans);
-  font-size: 19px;
-  line-height: 1.65;
+  font-size: 20px;
+  line-height: 1.6;
+  margin: 0;
   color: var(--color-text);
 }
 
@@ -77,47 +78,50 @@ h3 {
 
 .metadata {
   font-family: var(--font-sans);
-  font-size: 15px;
+  font-size: 11px;
   line-height: 1.5;
   color: #666;
 }
 
+.project-date {
+  font-family: var(--font-sans);
+  font-size: 12px !important;
+  line-height: 1.5;
+  color: #888;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
 .location {
-  font-size: 1rem;
-  color: #555;
-  margin-top: -8px;
-  margin-bottom: 16px;
+  font-size: 1.1rem;
+  color: #666;
+  margin: 0;
 }
 
 /* --- VERTICAL RHYTHM & SPACING --- */
 
 .header {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-areas:
+    "title title"
+    "location location"
+    "avatar bio";
+  grid-template-columns: auto 1fr;
+  gap: 0.25rem 1.5rem;
   align-items: center;
-  gap: 1rem;
-  margin-bottom: 32px;
+  margin-bottom: 3rem;
 }
+
+.main-title { grid-area: title; text-align: center; margin-bottom: 0; }
+.location   { grid-area: location; text-align: center; margin-bottom: 1.5rem; }
+.avatar     { grid-area: avatar; justify-self: end; }
+.bio        { grid-area: bio; text-align: left; margin: 0; }
 
 .avatar {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
-  margin-right: 0;
-  margin-bottom: 0;
-  display: block;
-  flex-shrink: 0;
   object-fit: cover;
-  align-self: center;
-}
-
-.header-content {
-  flex: 1;
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
 }
 
 /* --- PROYECTOS --- */
@@ -211,11 +215,25 @@ strong {
   font-weight: 600;
 }
 
-@media (max-width:700px){
-  .wrap{margin-top:1.5rem;}
-  .header{flex-direction:column;align-items:center;gap:0.8rem;}
-  .avatar{width:110px;height:110px;margin:0.8rem 0 0.4rem;}
+@media (max-width: 640px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  
+  .avatar     { order: 1; }
+  .main-title { order: 2; }
+  .location   { order: 3; }
+  .bio        { order: 4; font-size: 18px; }
+
+  .instagram-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
+
 
 .footer .avatar {
   display: block;
@@ -232,9 +250,8 @@ strong {
 }
 
 .photo-item {
-  aspect-ratio: 1/1;
+  aspect-ratio: 4/5;
   overflow: hidden;
-  position: relative;
   border-radius: 8px;
   cursor: pointer;
 }
@@ -272,11 +289,4 @@ strong {
   max-height: 90%;
   object-fit: contain;
   border-radius: 8px;
-}
-
-/* Responsive: 2 columnas en móvil */
-@media (max-width: 600px) {
-  .instagram-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
