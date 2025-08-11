@@ -54,12 +54,14 @@
         <h1 class="main-title">NICOLAS JOFRE</h1>
         <p class="location">Amsterdam, NL</p>
         <p class="bio">
-          I build simple digital tools that remove friction instead of adding to it. After years of growing SaaS and ecommerce across Europe and LatAm, I've learned that less is better. I write about shipping what matters. Email me at <a href="mailto:nicolas@njofre.com">nicolas@njofre.com</a>. Find me on <a href="https://linkedin.com/in/njofre">LinkedIn</a> or <a href="https://github.com/njofrey">GitHub</a>.<br><br>
+          I design and grow digital products with a focus on clarity, scalability and impact. I believe the best tools are the ones that remove friction from daily life, an idea I've applied in SaaS and e-commerce projects across different markets.<br><br>
+
+          I share ideas on building products that matter and scaling them with intention. You can reach me at <a href="mailto:nicolas@njofre.com">nicolas@njofre.com</a> or find me on <a href="https://linkedin.com/in/njofre">LinkedIn</a> and <a href="https://github.com/njofrey">GitHub</a>.<br><br>
         </p>
       </div>
     </header>
     <section>
-      <h2>Shipped Work</h2>
+      <h2>Things I've Built</h2>
       <div class="project">
         <h3><a href="https://messastudio.vercel.app/" target="_blank" rel="noopener noreferrer">Messa Studio</a></h3>
         <p><strong>Problem:</strong> Traditional floral design websites are often cluttered and don't showcase the transformative power of floral art in spaces.</p>
@@ -99,7 +101,45 @@
     </section>
 
     <section>
-      <h2>Writing</h2>
+      <h2>Sometimes I take photos</h2>
+      <div class="instagram-grid">
+        <div class="photo-item" onclick="openLightbox('img/photo1.jpg')">
+          <img src="img/photo1.jpg" alt="" loading="lazy">
+        </div>
+        <div class="photo-item" onclick="openLightbox('img/photo2.jpg')">
+          <img src="img/photo2.jpg" alt="" loading="lazy">
+        </div>
+        <div class="photo-item" onclick="openLightbox('img/photo3.jpg')">
+          <img src="img/photo3.jpg" alt="" loading="lazy">
+        </div>
+        <div class="photo-item" onclick="openLightbox('img/photo4.jpg')">
+          <img src="img/photo4.jpg" alt="" loading="lazy">
+        </div>
+        <div class="photo-item" onclick="openLightbox('img/photo5.jpg')">
+          <img src="img/photo5.jpg" alt="" loading="lazy">
+        </div>
+        <div class="photo-item" onclick="openLightbox('img/photo6.jpg')">
+          <img src="img/photo6.jpg" alt="" loading="lazy">
+        </div>
+        <div class="photo-item" onclick="openLightbox('img/photo7.jpg')">
+          <img src="img/photo7.jpg" alt="" loading="lazy">
+        </div>
+        <div class="photo-item" onclick="openLightbox('img/photo8.jpg')">
+          <img src="img/photo8.jpg" alt="" loading="lazy">
+        </div>
+        <div class="photo-item" onclick="openLightbox('img/photo9.jpg')">
+          <img src="img/photo9.jpg" alt="" loading="lazy">
+        </div>
+      </div>
+
+      <!-- Lightbox -->
+      <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="">
+      </div>
+    </section>
+
+    <section>
+      <h2>Notes</h2>
       <p><a href="posts/2025-01-18-building-tools-that-matter.html">Building tools that matter</a> <span class="metadata">16 Jul 2025</span></p>
       <p><a href="posts/2025-01-18-shipping-beats-planning.html">Shipping beats planning</a> <span class="metadata">23 Jul 2025</span></p>
       <p><a href="posts/2025-01-04-less-is-more.html">Less is more</a> <span class="metadata">09 Jul 2025</span></p>
@@ -122,6 +162,21 @@
 <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif?collect-dnt=true" alt="" referrerpolicy="no-referrer-when-downgrade"/></noscript>
 <script>
   document.getElementById('current-year').textContent = new Date().getFullYear();
+
+  // Lightbox functions
+  function openLightbox(imageSrc) {
+    document.getElementById('lightbox').style.display = 'block';
+    document.getElementById('lightbox-img').src = imageSrc;
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+  }
+
+  // Close with ESC key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeLightbox();
+  });
 </script>
   </body>
 </html>
