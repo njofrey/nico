@@ -61,7 +61,14 @@ h3 {
   color: #111;
 }
 
-.bio, .project p, p {
+.bio {
+  font-family: var(--font-sans);
+  font-size: 19px;
+  line-height: 1.65;
+  color: var(--color-text);
+}
+
+.project p, p {
   font-family: var(--font-sans);
   font-size: 17px;
   line-height: 1.65;
@@ -70,7 +77,7 @@ h3 {
 
 .metadata {
   font-family: var(--font-sans);
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.5;
   color: #666;
 }
