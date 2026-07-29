@@ -14,13 +14,13 @@
     --surface-2: #F4EDF2;
     --ink: #241E2E;
     --ink-soft: #4A4257;
-    --muted: #7C7488;
+    --muted: #676075;
     --line: #E2D8E2;
     --accent: #D2913A;        /* honey, tuned for light contrast */
     --accent-glow: #E8A94A;
-    --accent-ink: #A66E1F;
+    --accent-ink: #A66E1F; --accent-text: #8A5A16;
     --cool: #6C63C4;          /* periwinkle / moon */
-    --good: #4F9E7F;
+    --good: #2C6149;
     --hero-glow-a: rgba(232,169,74,0.28);
     --hero-glow-b: rgba(108,99,196,0.16);
     --dot: rgba(120,96,40,0.55);
@@ -46,7 +46,7 @@
       --line: #322A46;
       --accent: #F2B65C;
       --accent-glow: #F2B65C;
-      --accent-ink: #F5C877;
+      --accent-ink: #F5C877; --accent-text: #F5C877;
       --cool: #A79FF0;
       --good: #6FC0A0;
       --hero-glow-a: rgba(242,182,92,0.20);
@@ -58,14 +58,14 @@
   /* explicit toggle overrides (must beat the media query both ways) */
   :root[data-theme="light"] {
     --bg: #F2ECF0; --bg-soft: #F8F4F7; --surface: #FCFAFB; --surface-2: #F4EDF2;
-    --ink: #241E2E; --ink-soft: #4A4257; --muted: #7C7488; --line: #E2D8E2;
-    --accent: #D2913A; --accent-glow: #E8A94A; --accent-ink: #A66E1F; --cool: #6C63C4; --good: #4F9E7F;
+    --ink: #241E2E; --ink-soft: #4A4257; --muted: #676075; --line: #E2D8E2;
+    --accent: #D2913A; --accent-glow: #E8A94A; --accent-ink: #A66E1F; --accent-text: #8A5A16; --cool: #6C63C4; --good: #2C6149;
     --hero-glow-a: rgba(232,169,74,0.28); --hero-glow-b: rgba(108,99,196,0.16); --dot: rgba(120,96,40,0.55);
   }
   :root[data-theme="dark"] {
     --bg: #15111F; --bg-soft: #1A1528; --surface: #1E1930; --surface-2: #241E39;
     --ink: #ECE6F2; --ink-soft: #C6BDD4; --muted: #948BA6; --line: #322A46;
-    --accent: #F2B65C; --accent-glow: #F2B65C; --accent-ink: #F5C877; --cool: #A79FF0; --good: #6FC0A0;
+    --accent: #F2B65C; --accent-glow: #F2B65C; --accent-ink: #F5C877; --accent-text: #F5C877; --cool: #A79FF0; --good: #6FC0A0;
     --hero-glow-a: rgba(242,182,92,0.20); --hero-glow-b: rgba(167,159,240,0.18); --dot: rgba(245,224,180,0.75);
   }
 
@@ -90,17 +90,20 @@
 
   .eyebrow {
     font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase;
-    color: var(--accent-ink); font-weight: 600;
+    color: var(--accent-text); font-weight: 600;
   }
 
   /* ---- top bar ---- */
   .topbar {
     position: sticky; top: 0; z-index: 20;
-    display: flex; align-items: center; justify-content: space-between;
-    gap: 16px; padding-block: 16px;
-    background: color-mix(in srgb, var(--bg) 82%, transparent);
-    backdrop-filter: blur(10px);
+    background: color-mix(in srgb, var(--bg) 85%, transparent);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--line);
+  }
+  .topbar-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 16px; padding-block: 14px;
   }
   .brand { display: flex; align-items: center; gap: 10px; font-family: var(--font-display); font-size: 1.15rem; }
   .moon {
@@ -116,8 +119,10 @@
     border: 1px solid var(--line); border-radius: 999px;
     padding: 8px 16px; cursor: pointer; transition: all .2s ease;
   }
-  .theme-btn:hover { border-color: var(--accent); color: var(--accent-ink); }
+  .theme-btn:hover { border-color: var(--accent); color: var(--accent-text); }
   .theme-btn:focus-visible { outline: 2px solid var(--cool); outline-offset: 2px; }
+  .btn:focus-visible { outline: 2px solid var(--cool); outline-offset: 3px; }
+  summary:focus-visible { outline: 2px solid var(--cool); outline-offset: 2px; border-radius: 8px; }
 
   /* ---- hero ---- */
   .hero { position: relative; padding-top: clamp(56px, 10vw, 110px); padding-bottom: clamp(48px, 8vw, 96px); }
@@ -150,14 +155,14 @@
   .btn-primary { background: var(--accent); color: #241804; border: 1px solid var(--accent); box-shadow: 0 8px 24px -8px var(--accent-glow); }
   .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 14px 30px -8px var(--accent-glow); }
   .btn-ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); }
-  .btn-ghost:hover { border-color: var(--accent); color: var(--accent-ink); }
+  .btn-ghost:hover { border-color: var(--accent); color: var(--accent-text); }
   .hero-meta { display: flex; gap: 26px; flex-wrap: wrap; margin-top: 40px; }
   .hero-meta div { border-left: 2px solid var(--accent); padding-left: 12px; }
   .hero-meta b { display: block; font-family: var(--font-display); font-size: 1.5rem; }
   .hero-meta span { font-size: 0.82rem; color: var(--muted); }
 
   /* ---- generic section ---- */
-  section { padding-block: clamp(48px, 8vw, 90px); }
+  section { padding-block: clamp(48px, 8vw, 90px); scroll-margin-top: 80px; }
   .sec-head { max-width: 60ch; margin-bottom: 44px; }
   .sec-head h2 { font-size: clamp(1.8rem, 4vw, 2.7rem); margin-top: 12px; }
   .sec-head p { color: var(--ink-soft); font-size: 1.05rem; margin-top: 14px; }
@@ -191,7 +196,7 @@
   .seo-list li { list-style: none; display: flex; gap: 12px; align-items: flex-start; color: var(--ink-soft); }
   .seo-list .chk {
     flex: none; width: 24px; height: 24px; border-radius: 50%;
-    background: color-mix(in srgb, var(--good) 20%, transparent); color: var(--good);
+    background: color-mix(in srgb, var(--good) 25%, transparent); color: var(--good);
     display: grid; place-items: center; font-size: 13px; font-weight: 700; margin-top: 1px;
   }
   ul { padding: 0; margin: 0; }
@@ -204,7 +209,7 @@
     content: ""; position: absolute; top: 8px; left: 0; right: 0; height: 2px;
     background: linear-gradient(90deg, var(--accent), transparent);
   }
-  .step .n { font-family: var(--font-display); font-size: 0.9rem; color: var(--accent-ink); letter-spacing: 0.12em; }
+  .step .n { font-family: var(--font-display); font-size: 0.9rem; color: var(--accent-text); letter-spacing: 0.12em; }
   .step h3 { font-size: 1.15rem; margin: 8px 0 8px; }
   .step p { margin: 0; color: var(--ink-soft); font-size: 0.94rem; }
 
@@ -225,7 +230,7 @@
   .price-main .desc { color: var(--ink-soft); max-width: 42ch; }
   .price-side { display: grid; gap: 18px; align-content: start; }
   .price-note { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-s); padding: 20px; }
-  .price-note h3 { font-family: var(--font-body); font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-ink); margin-bottom: 8px; }
+  .price-note h3 { font-family: var(--font-body); font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-text); margin-bottom: 8px; }
   .price-note p { margin: 0; color: var(--ink-soft); font-size: 0.94rem; }
   .fineprint { color: var(--muted); font-size: 0.82rem; margin-top: 18px; }
 
@@ -283,15 +288,15 @@
 <canvas id="sky" aria-hidden="true"></canvas>
 
 <div class="wrap">
-  <div class="container">
-    <div class="topbar">
+  <header class="topbar">
+    <div class="container topbar-inner">
       <div class="brand">
         <span class="moon" aria-hidden="true"></span>
         <span>Tienda de pijamas <small>Propuesta</small></span>
       </div>
       <button class="theme-btn" id="themeToggle" aria-label="Cambiar tema">Noche / Día</button>
     </div>
-  </div>
+  </header>
 
   <main>
   <!-- HERO -->
@@ -460,7 +465,7 @@
   </main>
 
   <footer>
-    <div class="container">Propuesta · <a href="https://vcsagencia.cl" style="color:var(--accent-ink); text-decoration:none;">vcsagencia.cl</a></div>
+    <div class="container">Propuesta · <a href="https://vcsagencia.cl" style="color:var(--accent-text); text-decoration:none;">vcsagencia.cl</a></div>
   </footer>
 </div>
 
