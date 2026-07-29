@@ -1,4 +1,10 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Propuesta · Tienda de pijamas online</title>
+<meta name="description" content="Ecommerce de pijamas listo para vender: catálogo, pagos en Chile (Mercado Pago, Flow, Fintoc), despacho y SEO. Pago único, la tienda queda a tu nombre.">
 <style>
   :root {
     /* MORNING (light) */
@@ -87,13 +93,6 @@
     color: var(--accent-ink); font-weight: 600;
   }
 
-  .ph {
-    color: var(--accent-ink);
-    border-bottom: 1.5px dashed var(--accent);
-    font-style: normal;
-    white-space: nowrap;
-  }
-
   /* ---- top bar ---- */
   .topbar {
     position: sticky; top: 0; z-index: 20;
@@ -162,6 +161,7 @@
   .sec-head { max-width: 60ch; margin-bottom: 44px; }
   .sec-head h2 { font-size: clamp(1.8rem, 4vw, 2.7rem); margin-top: 12px; }
   .sec-head p { color: var(--ink-soft); font-size: 1.05rem; margin-top: 14px; }
+  .sec-head:last-child { margin-bottom: 0; }
 
   /* ---- features grid ---- */
   .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
@@ -263,11 +263,22 @@
   .d4 { animation-delay: .35s; } .d5 { animation-delay: .45s; }
   @keyframes rise { to { opacity: 1; transform: none; } }
 
+  @media (max-width: 480px) {
+    .hero-meta { gap: 18px; }
+    .hero-meta b { font-size: 1.3rem; }
+    .btn { padding: 12px 20px; }
+    .cta-inner { border-radius: 20px; }
+    .brand { font-size: 1rem; }
+    .container { padding-inline: 18px; }
+  }
+
   @media (prefers-reduced-motion: reduce) {
     * { animation: none !important; transition: none !important; scroll-behavior: auto; }
     .reveal { opacity: 1; transform: none; }
   }
 </style>
+</head>
+<body>
 
 <canvas id="sky" aria-hidden="true"></canvas>
 
@@ -282,12 +293,13 @@
     </div>
   </div>
 
+  <main>
   <!-- HERO -->
   <header class="hero">
     <div class="container">
       <span class="hero-chip reveal d1"><b>Propuesta</b> · Tienda online de pijamas</span>
       <h1 class="reveal d2">Tu tienda de pijamas online, lista para <em>vender</em> sin dramas.</h1>
-      <p class="lead reveal d3">Te armamos el ecommerce completo: catálogo, pagos, despacho y SEO. Tú subes los pijamas y tus clientas compran solas, de día o a las tres de la mañana.</p>
+      <p class="lead reveal d3">Te armo el ecommerce completo: catálogo, pagos, despacho y SEO. Tú subes los pijamas y tus clientas compran solas, de día o a las tres de la mañana.</p>
       <div class="hero-actions reveal d4">
         <a class="btn btn-primary" href="#incluye">Ver qué incluye</a>
         <a class="btn btn-ghost" href="#inversion">Inversión</a>
@@ -306,7 +318,7 @@
       <div class="sec-head">
         <span class="eyebrow">Qué construimos</span>
         <h2>Tu tienda, a tu nombre y bajo tu control.</h2>
-        <p>Una tienda online pensada para pijamas, con hasta 50 productos cargados y ordenados. Rápida en el celular y fácil de administrar. Nada de plantillas genéricas, todo queda con tu marca. La construimos, te la dejamos andando y es tuya.</p>
+        <p>Una tienda online pensada para pijamas, con hasta 50 productos cargados y ordenados. Rápida en el celular y fácil de administrar. Nada de plantillas genéricas, todo queda con tu marca. La construyo, te la dejo lista y es tuya.</p>
       </div>
     </div>
   </section>
@@ -319,16 +331,16 @@
         <h2>Lo que ya viene resuelto.</h2>
       </div>
       <div class="grid">
-        <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v5"/></svg></div><h3>Catálogo de 50 productos</h3><p>Cada pijama con sus fotos, tallas, colores y stock, ordenado por categorías para encontrarlo al toque.</p></div>
-        <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2 3h3l2.4 12.2a1 1 0 0 0 1 .8h9.2a1 1 0 0 0 1-.8L21 7H6"/></svg></div><h3>Carrito y checkout</h3><p>Una compra corta y clara, sin pasos de más, para que la venta no se caiga a mitad de camino.</p></div>
-        <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></div><h3>Pagos en Chile</h3><p>Mercado Pago, Flow y Fintoc integrados. Tus clientas pagan con tarjeta, débito o transferencia, como les acomode.</p></div>
-        <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17" cy="18" r="1.6"/></svg></div><h3>Despacho y envíos</h3><p>Cálculo de envío, retiro en tienda y conexión con couriers. Cada pedido con su seguimiento.</p></div>
-        <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div><h3>SEO incluido</h3><p>Tu tienda preparada para Google: títulos, descripciones, mapa del sitio y velocidad de carga cuidada.</p></div>
-        <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg></div><h3>Diseño mobile-first</h3><p>Se ve bien en el celular antes que nada, que es donde compra la mayoría.</p></div>
-        <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16v12H4z"/><path d="M8 20h8M12 16v4"/><path d="M7 12l3-3 2 2 4-4"/></svg></div><h3>Panel para ti</h3><p>Subes productos, cambias precios y revisas pedidos cuando quieras. Si sabes mandar un WhatsApp, sabes usar el panel.</p></div>
-        <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg></div><h3>Medición</h3><p>Google Analytics y pixel de Meta listos, para saber qué se vende y de dónde te llegan.</p></div>
-        <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 12v7a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-7"/><path d="M2 7h20v5H2zM12 22V7M12 7S9 2 6.5 4.5 12 7 12 7ZM12 7s3-5 5.5-2.5S12 7 12 7Z"/></svg></div><h3>Cupones y promos</h3><p>Descuentos, códigos y ofertas para fechas especiales, y los armas tú misma.</p></div>
-        <div class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></div><h3>Correos automáticos</h3><p>La confirmación de compra y el aviso de despacho salen solos, sin que escribas nada.</p></div>
+        <div class="card"><div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v5"/></svg></div><h3>Catálogo de 50 productos</h3><p>Cada pijama con sus fotos, tallas, colores y stock, ordenado por categorías para encontrarlo al toque.</p></div>
+        <div class="card"><div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2 3h3l2.4 12.2a1 1 0 0 0 1 .8h9.2a1 1 0 0 0 1-.8L21 7H6"/></svg></div><h3>Carrito y checkout</h3><p>Una compra corta y clara, sin pasos de más, para que la venta no se caiga a mitad de camino.</p></div>
+        <div class="card"><div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></div><h3>Pagos en Chile</h3><p>Mercado Pago, Flow y Fintoc integrados. Tus clientas pagan con tarjeta, débito o transferencia, como les acomode.</p></div>
+        <div class="card"><div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17" cy="18" r="1.6"/></svg></div><h3>Despacho y envíos</h3><p>Cálculo de envío, retiro en tienda y conexión con couriers. Cada pedido con su seguimiento.</p></div>
+        <div class="card"><div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div><h3>SEO incluido</h3><p>Tu tienda preparada para Google: títulos, descripciones, mapa del sitio y velocidad de carga cuidada.</p></div>
+        <div class="card"><div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg></div><h3>Diseño mobile-first</h3><p>Se ve bien en el celular antes que nada, que es donde compra la mayoría.</p></div>
+        <div class="card"><div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16v12H4z"/><path d="M8 20h8M12 16v4"/><path d="M7 12l3-3 2 2 4-4"/></svg></div><h3>Panel para ti</h3><p>Subes productos, cambias precios y revisas pedidos cuando quieras. Si sabes mandar un WhatsApp, sabes usar el panel.</p></div>
+        <div class="card"><div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg></div><h3>Medición</h3><p>Google Analytics y pixel de Meta listos, para saber qué se vende y de dónde te llegan.</p></div>
+        <div class="card"><div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 12v7a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-7"/><path d="M2 7h20v5H2zM12 22V7M12 7S9 2 6.5 4.5 12 7 12 7ZM12 7s3-5 5.5-2.5S12 7 12 7Z"/></svg></div><h3>Cupones y promos</h3><p>Descuentos, códigos y ofertas para fechas especiales, y los armas tú misma.</p></div>
+        <div class="card"><div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></div><h3>Correos automáticos</h3><p>La confirmación de compra y el aviso de despacho salen solos, sin que escribas nada.</p></div>
       </div>
     </div>
   </section>
@@ -400,11 +412,15 @@
         <div class="price-side">
           <div class="price-note">
             <h3>Sin cuota mensual</h3>
-            <p>Pago único, sin mensualidad obligatoria. La construyo, te la entrego andando y queda funcionando sola.</p>
+            <p>Pago único, sin mensualidad obligatoria. Te la entrego funcionando y lista para vender.</p>
           </div>
           <div class="price-note">
             <h3>Es tuya</h3>
             <p>Dominio, cuentas y contenido quedan a tu nombre. Sin amarres ni letra chica.</p>
+          </div>
+          <div class="price-note">
+            <h3>Capacitación incluida</h3>
+            <p>Antes de entregártela te enseño a manejarla, para que la administres tranquila desde el primer día.</p>
           </div>
         </div>
       </div>
@@ -441,6 +457,8 @@
     </div>
   </section>
 
+  </main>
+
   <footer>
     <div class="container">Propuesta · <a href="https://vcsagencia.cl" style="color:var(--accent-ink); text-decoration:none;">vcsagencia.cl</a></div>
   </footer>
@@ -451,12 +469,21 @@
   (function () {
     var root = document.documentElement;
     var btn = document.getElementById('themeToggle');
-    btn.addEventListener('click', function () {
-      var now = getComputedStyle(root).getPropertyValue('--bg').trim();
-      var isDark = root.getAttribute('data-theme') === 'dark'
+    function currentIsDark() {
+      return root.getAttribute('data-theme') === 'dark'
         || (!root.getAttribute('data-theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
-      root.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    }
+    function syncLabel() {
+      var dark = currentIsDark();
+      btn.textContent = dark ? 'Modo día' : 'Modo noche';
+      btn.setAttribute('aria-pressed', dark ? 'true' : 'false');
+    }
+    btn.addEventListener('click', function () {
+      root.setAttribute('data-theme', currentIsDark() ? 'light' : 'dark');
+      syncLabel();
+      if (window.__repaintSky) window.__repaintSky();
     });
+    syncLabel();
   })();
 
   // Ambient sky: soft drifting motes (stars at night / dust in the morning light)
@@ -507,6 +534,9 @@
       if (!reduce) requestAnimationFrame(draw);
     }
     resize(); seed(); draw();
+    window.__repaintSky = function () { if (reduce) draw(); };
     window.addEventListener('resize', function () { resize(); seed(); if (reduce) draw(); });
   })();
 </script>
+</body>
+</html>
