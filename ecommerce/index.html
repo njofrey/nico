@@ -203,6 +203,12 @@
   ul { padding: 0; margin: 0; }
   @media (min-width: 720px) { .seo-list { grid-template-columns: 1fr 1fr; gap: 12px 28px; } }
 
+  /* ---- esto es para ti si ---- */
+  .tsuena { display: grid; gap: 14px; grid-template-columns: 1fr; }
+  .tsuena li { list-style: none; position: relative; padding-left: 26px; color: var(--ink-soft); font-size: 1.02rem; }
+  .tsuena li::before { content: ""; position: absolute; left: 0; top: 9px; width: 10px; height: 10px; border-radius: 50%; border: 2px solid var(--accent); }
+  @media (min-width: 720px) { .tsuena { grid-template-columns: 1fr 1fr; gap: 16px 28px; } }
+
   /* ---- timeline ---- */
   .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; }
   .step { position: relative; padding-top: 26px; }
@@ -304,8 +310,8 @@
   <header class="hero">
     <div class="container">
       <span class="hero-chip reveal d1"><b>Propuesta</b> · Tienda online de pijamas</span>
-      <h1 class="reveal d2">Tu tienda de pijamas online, lista para <em>vender</em>.</h1>
-      <p class="lead reveal d3">Te armo el ecommerce completo: catálogo, pagos, despacho y SEO. Tú subes los pijamas y tus clientas compran solas, de día o a las tres de la mañana.</p>
+      <h1 class="reveal d2">Tus pijamas ya se venden. Ahora que se vendan <em>solos</em>.</h1>
+      <p class="lead reveal d3">Hoy respondes precios por DM, anotas los pedidos en el cuaderno y cobras por transferencia una por una. Te armo la tienda donde tus clientas eligen, pagan y reciben solas, de día o a las tres de la mañana.</p>
       <div class="hero-actions reveal d4">
         <a class="btn btn-primary" href="#incluye">Ver qué incluye</a>
         <a class="btn btn-ghost" href="#inversion">Inversión</a>
@@ -317,6 +323,22 @@
       </div>
     </div>
   </header>
+
+  <!-- PARA QUIEN -->
+  <section id="para-quien">
+    <div class="container">
+      <div class="sec-head">
+        <span class="eyebrow">¿Te suena?</span>
+        <h2>Esto es para ti si…</h2>
+      </div>
+      <ul class="tsuena">
+        <li>Vendes por Instagram y el "¿te llegó el depósito?" ya te tiene chata.</li>
+        <li>Anotas los pedidos en el cuaderno o en las notas del teléfono.</li>
+        <li>Respondes "¿cuánto vale?" y "¿hacen envíos?" veinte veces al día.</li>
+        <li>Sientes que tu marca da para más que un feed de Instagram.</li>
+      </ul>
+    </div>
+  </section>
 
   <!-- EL PROYECTO -->
   <section id="proyecto">
