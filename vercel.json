@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/cal",
+      "destination": "https://calendly.com/nicolas-njofre/60min",
+      "permanent": false
+    },
+    {
+      "source": "/calendario",
+      "destination": "https://calendly.com/nicolas-njofre/60min",
+      "permanent": false
+    }
+  ]
+}
